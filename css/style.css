@@ -121,7 +121,7 @@ button:hover{
      width: 21%;
      margin: 1%;
      transition: all .2s ease;
-     box-shadow: 0 4px 10px -2px black;
+     box-shadow: 0 4px 15px -2px black;
 }
 #cards img:hover{
      transform: scale(1.1);
