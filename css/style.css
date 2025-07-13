@@ -87,21 +87,24 @@ button:hover{
 .logo{
      width: 40%;
      height: auto;
+     padding: 0;
+     margin: -2em;
 }
 #logoTop{
-     display: flex;
-     align-items: center;
-     justify-content: center;
+     max-height: fit-content;
      margin: 0;
-     height: 10em;
      background-color: rgb(217, 69, 69);
-     border-bottom: 3px solid white;
+     border-bottom: 5px solid white;
      border-bottom-left-radius: 30px;
      border-bottom-right-radius: 30px;
      width: 100%;
+     box-shadow: 0px 0px 10px 0px black;
 }
 #searchLogo{
-     transform: scale(50%);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transform: scale(70%);
      cursor: pointer;
 }
 #cards{
@@ -118,6 +121,7 @@ button:hover{
      width: 21%;
      margin: 1%;
      transition: all .2s ease;
+     box-shadow: 0 4px 10px -2px black;
 }
 #cards img:hover{
      transform: scale(1.1);
