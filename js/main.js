@@ -1,10 +1,13 @@
-apiKey = 'a944a4e4-f699-4628-9083-8f831562154a'
+let pokemonName = localStorage.getItem('pokemonInput')
+
+
+apiKey = ''
+
 
 function search(){
-fetch(`https://api.pokemontcg.io/v2/cards`)
+fetch(`https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}`)
 .then(res => res.json()) // parse response as JSON
 .then(data => {
-  console.log(data)
     data.data.forEach(num => {
         let pokemon = num.images.small;
 
@@ -12,11 +15,17 @@ fetch(`https://api.pokemontcg.io/v2/cards`)
         myImage.src = pokemon
         const cardSection = document.getElementById('cards')
         cardSection.appendChild(myImage);
+
+        // let images = document.getElementsByTagName('img')
+        // for (let i = 0; i < images.length; i++){
+        //     images[i].addEventListener('click', function(){
+        //         this.classList.toggle('fullSize')
+        //     })
+        // }
     })
 })
 .catch(err => {
     console.log(`error ${err}`)
 });
 };
-
 search()

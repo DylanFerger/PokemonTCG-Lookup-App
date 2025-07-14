@@ -18,6 +18,13 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+		<script>
+			function saveValue(){
+				let input = document.querySelector('#pokemonSearch');
+				let inputValue = input.value.toLowerCase();
+				localStorage.setItem('pokemonInput', inputValue)
+			}
+		</script>
 	</head>
 	<body id="home"> 
 
@@ -25,9 +32,9 @@
 					<img class="logo" src="css/images/Pokémon_Trading_Card_Game_logo.svg.png" alt="">
 				</section>
 				<section class="searchBar">
-					<label for="pokemon-search"></label>
-					<input type="search" name="" id="pokemon-search">
-					<button type="submit" id="submit"><a href="search.html">SEARCH</a></button>
+					<label for="pokemonSearch"></label>
+					<input type="search" name="" id="pokemonSearch">
+					<button type="submit" id="submit" onclick="saveValue()"><a href="search.html">SEARCH</a></button>
 				</section>
 
 			<footer></footer>
