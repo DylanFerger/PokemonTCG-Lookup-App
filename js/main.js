@@ -1,3 +1,4 @@
+
 let pokemonName = localStorage.getItem('pokemonInput')
 
 
@@ -15,13 +16,6 @@ fetch(`https://api.pokemontcg.io/v2/cards?q=name:${pokemonName}`)
         myImage.src = pokemon
         const cardSection = document.getElementById('cards')
         cardSection.appendChild(myImage);
-
-        // let images = document.getElementsByTagName('img')
-        // for (let i = 0; i < images.length; i++){
-        //     images[i].addEventListener('click', function(){
-        //         this.classList.toggle('fullSize')
-        //     })
-        // }
     })
 })
 .catch(err => {
